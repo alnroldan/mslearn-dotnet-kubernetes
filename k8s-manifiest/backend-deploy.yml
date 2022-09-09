@@ -2,35 +2,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pizzafrontend
+  name: pizzabackend
+  namespace: secrets-k8s
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: pizzafrontend
+        app: pizzabackend
     spec:
       containers:
-      - name: pizzafrontend
-        image: [YOUR DOCKER USERNAME]/pizzafrontend
+      - name: pizzabackend
+        image: alnroldan/pizzabackend:1.0.0
         ports:
         - containerPort: 80
         env:
         - name: ASPNETCORE_URLS
           value: http://*:80
-        - name: backendUrl
-          value: http://pizzabackend
+        - name: NEW_PIZZA_FROM_ENV
+          value: "Hawai from K8s Manifiest"
   selector:
     matchLabels:
-      app: pizzafrontend
+      app: pizzabackend
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: pizzafrontend
-spec:
-  type: LoadBalancer
+  name: pizzabackend
+  namespace: secrets-k8s
+spec:  
   ports:
   - port: 80
+  type: ClusterIP
   selector:
-    app: pizzafrontend
+    app: pizzabackend

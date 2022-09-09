@@ -1,0 +1,27 @@
+docker-compose build
+
+docker-compose up
+
+http://localhost:5902
+
+docker tag pizzafrontend alnroldan/pizzafrontend
+
+docker tag pizzabackend alnroldan/pizzabackend
+
+docker push alnroldan/pizzafrontend:latest
+
+docker push alnroldan/pizzabackend:latest
+
+kubectl apply -f namespace-k8s.yml
+
+kubectl apply -f backend-deploy.yml
+
+kubectl apply -f frontend-deploy.yml
+
+kubectl get all -n secrets-k8s
+
+kubectl port-forward service/pizzafrontend 30004:80 -n secrets-k8s
+
+http://localhost:30004/
+
+kubectl delete namespace secrets-k8s

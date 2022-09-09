@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend", "backend\backend.csproj", "{1CB4BCB7-4A67-465B-8304-C47422C91344}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "frontend", "frontend\frontend.csproj", "{93C1CF56-15D5-4406-9D3E-87D78D804945}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9843839F-4DEE-4F74-AF5C-ADF631AD1606}"
+	ProjectSection(SolutionItems) = preProject
+		k8s-manifiest\backend-deploy.yml = k8s-manifiest\backend-deploy.yml
+		commands.txt = commands.txt
+		docker-compose.yml = docker-compose.yml
+		finished-files\frontend-deploy.yml = finished-files\frontend-deploy.yml
+		namespace-k8s.yml = namespace-k8s.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CB4BCB7-4A67-465B-8304-C47422C91344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB4BCB7-4A67-465B-8304-C47422C91344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB4BCB7-4A67-465B-8304-C47422C91344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB4BCB7-4A67-465B-8304-C47422C91344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93C1CF56-15D5-4406-9D3E-87D78D804945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C1CF56-15D5-4406-9D3E-87D78D804945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C1CF56-15D5-4406-9D3E-87D78D804945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C1CF56-15D5-4406-9D3E-87D78D804945}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BD144CF-21FF-4A04-AEAE-A1724A1FBD24}
+	EndGlobalSection
+EndGlobal
