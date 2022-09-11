@@ -20,6 +20,8 @@ services:
       dockerfile: Dockerfile
     environment: 
       - NEW_PIZZA_FROM_ENV="Hawai from Docker Compose"
+      - SECRET_USERNAME="user"
+      - SECRET_PASSWORD="password"
     ports: 
       - "5900:80"
     

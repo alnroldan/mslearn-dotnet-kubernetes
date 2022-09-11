@@ -31,9 +31,8 @@ metadata:
   name: pizzafrontend
   namespace: secrets-k8s
 spec:
-  type: NodePort #LoadBalancer
+  type: LoadBalancer
   ports:
   - port: 80
-    nodePort: 30004
   selector:
     app: pizzafrontend

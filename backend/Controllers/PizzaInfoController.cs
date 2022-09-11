@@ -22,7 +22,9 @@ namespace backend.Controllers
             new PizzaInfo { PizzaName = "Don't At Me", Ingredients = "Pineapple, Canadian bacon, jalapeños", Cost = 25, InStock = "yes"},
             new PizzaInfo { PizzaName = "Vanilla", Ingredients = "Sausage and pepperoni", Cost = 15, InStock = "no"},
             new PizzaInfo { PizzaName = "Spice Coming At Ya", Ingredients = "Peppers, chili sauce, spicy andouille", Cost = 50, InStock = "yes"},
-            new PizzaInfo { PizzaName = Environment.GetEnvironmentVariable("NEW_PIZZA_FROM_ENV"), Ingredients = "Peppers, chili, sauces, spicy andouille", Cost = 50, InStock = "yes"}
+            new PizzaInfo { PizzaName = Environment.GetEnvironmentVariable("NEW_PIZZA_FROM_ENV"), Ingredients = "Peppers, chili, sauces, spicy andouille", Cost = 50, InStock = "yes"},
+            new PizzaInfo { PizzaName = Environment.GetEnvironmentVariable("SECRET_USERNAME"), Ingredients = "spicy andouille", Cost = 50, InStock = "yes"},
+            new PizzaInfo { PizzaName = Environment.GetEnvironmentVariable("SECRET_PASSWORD"), Ingredients = "Peppers, chili", Cost = 50, InStock = "yes"}
         };
 
         private readonly ILogger<PizzaInfoController> _logger;

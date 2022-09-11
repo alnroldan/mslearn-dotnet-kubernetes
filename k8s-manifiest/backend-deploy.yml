@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: pizzabackend
-        image: alnroldan/pizzabackend:1.0.0
+        image: alnroldan/pizzabackend:1.1.0
         ports:
         - containerPort: 80
         env:
@@ -21,6 +21,18 @@ spec:
           value: http://*:80
         - name: NEW_PIZZA_FROM_ENV
           value: "Hawai from K8s Manifiest"
+        - name: SECRET_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: backend-secret
+              key: username
+              optional: false 
+        - name: SECRET_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: backend-secret
+              key: password
+              optional: false 
   selector:
     matchLabels:
       app: pizzabackend
