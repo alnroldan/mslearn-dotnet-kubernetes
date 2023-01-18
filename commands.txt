@@ -24,6 +24,12 @@ kubectl get all -n secrets-k8s
 
 kubectl port-forward service/pizzafrontend 30004:80 -n secrets-k8s
 
+kubectl port-forward svc/nginx 30001:80
+curl http://localhost:30001/
+
+ssh -i "exogames-app-enero.pem" ec2-user@ec2-54-86-59-187.compute-1.amazonaws.com
+
+
 http://localhost:30004/
 
 kubectl delete namespace secrets-k8s
